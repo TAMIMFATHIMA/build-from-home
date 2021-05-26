@@ -19,15 +19,19 @@ from django.urls import path
 from django.urls.conf import include
 from django.conf import settings
 from django.conf.urls.static import static
+from users import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register',views.registerpage,name="register"),
+    path('login/',views.loginpage,name="login"),
     path('audio/',include('audio.urls')),
     path('video/',include('video.urls'))
 ]
 
 urlpatterns = [
 
-    //YOUR_PATH_HERE,
-]+
+    url(r^  ),
+]+  
 static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
